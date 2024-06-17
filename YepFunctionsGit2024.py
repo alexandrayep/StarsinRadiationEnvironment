@@ -258,8 +258,8 @@ def opfits(name,epoch=1): #'object name' from the log.  Setup:   dat,head=opfits
 
 #wavelength, flux
 def wf(dat,o): #whichord,dat. Setup:   w,f=wf(#,dat)
-    w=[d[0] for d in dat[o]]
-    f=[d[1] for d in dat[o]]
+    w=np.array([d[0] for d in dat[o]])
+    f=np.array([d[1] for d in dat[o]])
     return w,f
 
 #Blaze file:
